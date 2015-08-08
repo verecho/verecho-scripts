@@ -7,7 +7,7 @@ if ARGV.length < 2
 end
 
 CSV.open(ARGV[1],"w") do |file|
-	file << ["to", "link"]
+	file << ["email", "link"]
 
 	Mbox.open(ARGV.shift).each {|mail|
 		to = mail.headers['to']
